@@ -1,0 +1,329 @@
+/* TRANSFORMATIONS */
+
+
+
+
+/* BASE STYLES
+------------------------------------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 80vw;
+    background-color: #c3e05c;
+    color: #ffffff;
+    font-family: 'Markazi Text', serif;
+    perspective: 200px;
+    position: relative;
+
+    animation-name: bg-color;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+
+}
+
+@keyframes bg-color {
+    0% {background-color: #97ecde;}
+    25% {background-color: #bd7ae3;}
+    50% {background-color: #ec67b0;}
+    100% {background-color: #fec44f;}
+}
+
+
+img {
+    max-width: 100%;
+}
+
+
+
+/* WEIRD STUFF
+------------------------------------- */
+
+.pattern1 img{
+    opacity: 0;
+    transform: translateX(40px);
+    transition: .5s;
+    animation-name: rotate;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    position: relative;
+
+    border-radius: 50%;
+    width: 40em;
+    height: 40em;
+    object-fit: cover;
+    object-position: -16em 0;
+    margin-left: 3em;
+    margin-top: 3em;
+
+}
+
+@keyframes rotate{
+    0% {
+        opacity: 0;
+        transform: rotateY(0) translateY(40px)
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(360deg) translateY(0);
+    }
+}
+
+
+
+
+.hello {
+    font-size: 60px;
+    font-family: 'Markazi Text', serif;
+    position: absolute;
+    padding: 0.5px;
+    margin: 5.1em 0 0 100px;
+    line-height: 2.4em;
+    text-align: center;
+    background-color: #ff9400;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    animation: hello 5.6s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 7%;
+    transform-origin: right center;
+
+}
+
+.hello:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    margin-top: 0px;
+    border: 12px solid transparent;
+    border-left: 50px solid #ff9400;
+    z-index: 0;
+    -webkit-transform: rotate(10deg);
+}
+
+@keyframes hello {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translateX(-5%);
+    }
+    30% {
+        transform:scaleX(1) translateX(0);
+    }
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+    30%, 100% {
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+
+.pattern2 img{
+    opacity: 0;
+    transform: translateX(40px);
+    transition: .5s;
+    animation-name: rotate;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-delay: 3s;
+
+    border-radius: 50%;
+    width: 40em;
+    height: 40em;
+    object-fit: cover;
+    object-position: -17em 0;
+    margin-left: 35em;
+
+}
+
+@keyframes rotate{
+    0% {
+        opacity: 0;
+        transform: rotateY(0) translateY(40px)
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(360deg) translateY(0);
+    }
+    
+}
+
+
+
+.name {
+    font-size: 50px;
+    font-family: 'Markazi Text', serif;
+    line-break: normal;
+    position: absolute;
+    padding: 40px;
+    margin: 18em 0px 0 17.5em;
+    line-height: 1.2em;
+    text-align: center;
+    background-color: #ff9400;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    animation:name 5.6s;
+    animation-delay: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 9.5%;
+    transform-origin: left center;
+    animation-delay: 5s;
+
+}
+
+.name:before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 5.2em;
+    margin-top: 0px;
+    border: 12px solid transparent;
+    border-left: 60px solid #ff9400;
+    z-index: 0;
+    -webkit-transform: rotate(150deg);
+}
+
+@keyframes name {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translateX(-5%);
+    }
+    30% {
+        transform:scaleX(1) translateX(0);
+    }
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+    30%, 100% {
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+
+.pattern3 img{
+    opacity: 0;
+    transform: translateX(40px);
+    transition: .5s;
+    animation-name: rotate;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    position: relative;
+    animation-delay: 6s;
+    
+    border-radius: 50%;
+    width: 40em;
+    height: 40em;
+    object-fit: cover;
+    object-position: -18em 0;
+    margin-left: 3em;
+
+}
+
+@keyframes rotate{
+    0% {
+        opacity: 0;
+        transform: rotateY(0) translateY(40px)
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(360deg) translateY(0);
+    }
+}
+
+
+.NTMY {
+    font-size: 50px;
+    font-family: 'Markazi Text', serif;
+    line-break: normal;
+    position: absolute;
+    padding: 39px;
+    margin: 30em 0px 0 7em;
+    line-height: 1.2em;
+    text-align: center;
+    background-color: #ff9400;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: "";
+    animation:NTMY 5.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 9.5%;
+    transform-origin: left center;
+    animation-delay: 8s;
+
+}
+
+.NTMY:before {
+    content: "";
+    position: absolute;
+    top: 60%;
+    right: 5.5em;
+    margin-top: 0px;
+    border: 12px solid transparent;
+    border-left: 50px solid #ff9400;
+    z-index: 0;
+    -webkit-transform: rotate(160deg);
+}
+
+@keyframes NTMY {
+    0% {
+        opacity: 0;
+        transform: scaleX(0) translateX(-5%);
+    }
+    30% {
+        transform:scaleX(1) translateX(0);
+    }
+    100% {
+        transform: scaleX(1) translateX(0);
+    }
+    30%, 100% {
+        opacity: 1;
+    }
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
